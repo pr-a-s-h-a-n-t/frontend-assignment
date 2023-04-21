@@ -1,114 +1,324 @@
-import React from "react";
-import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Button,
+  useColorModeValue,
+  Stack,
+  useColorMode,
+  Show,
+  HStack,
+  Text,
+  useDisclosure,
+  IconButton,
+  Hide,
+} from "@chakra-ui/react";
+import {
+  MoonIcon,
+  SunIcon,
+  HamburgerIcon,
+  CloseIcon,
+  AddIcon,
+} from "@chakra-ui/icons";
+import tree from "../assets/tree.svg";
+// import Name from "./Name";
+// import "./Navbar.css";
+import Shubham_Verma_Resume from "../assets/tree.svg";
 
-// import { ReactComponent as Logo } from "../crown.svg";
+export default function Navbar() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-const NavBar = (props) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
+  const onButtonClick = () => {
+    window.open(Shubham_Verma_Resume);
+  };
 
   return (
-    <NavBarContainer {...props}>
-      <Logo />
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
-    </NavBarContainer>
-  );
-};
-
-const CloseIcon = () => (
-  <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-    <title>Close</title>
-    <path
-      fill="white"
-      d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502 15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023 2.63599L9.00023 7.58599Z"
-    />
-  </svg>
-);
-
-const MenuIcon = () => (
-  <svg
-    width="24px"
-    viewBox="0 0 20 20"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="white"
-  >
-    <title>Menu</title>
-    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-  </svg>
-);
-
-const MenuToggle = ({ toggle, isOpen }) => {
-  return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
-      {isOpen ? <CloseIcon /> : <MenuIcon />}
-    </Box>
-  );
-};
-
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
-  return (
-    <Link href={to}>
-      <Text display="block" {...rest}>
-        {children}
-      </Text>
-    </Link>
-  );
-};
-
-const MenuLinks = ({ isOpen }) => {
-  return (
-    <Box
-      display={{ base: isOpen ? "block" : "none", md: "block" }}
-      flexBasis={{ base: "100%", md: "auto" }}
-    >
-      <Stack
-        spacing={8}
-        align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
-        direction={["column", "row", "row", "row"]}
-        pt={[4, 4, 0, 0]}
+    <div id="navFix">
+      <Box
+        bg={useColorModeValue("gray.100", "gray.900")}
+        px={9}
+        width={["100%"]}
       >
-        <MenuItem to="/">Minha Conta</MenuItem>
-        <MenuItem to="/how"> Meus Pedidos </MenuItem>
-        <MenuItem to="/faetures"> Favoritos </MenuItem>
-        <MenuItem to="/pricing"> Recomendados </MenuItem>
-        <MenuItem to="/signup" isLast>
-          <Button
-            size="sm"
-            rounded="md"
-            color={["primary.500", "primary.500", "white", "white"]}
-            bg={["white", "white", "primary.500", "primary.500"]}
-            _hover={{
-              bg: ["primary.100", "primary.100", "primary.600", "primary.600"],
-            }}
-          >
-            Sair
-          </Button>
-        </MenuItem>
-      </Stack>
-    </Box>
-  );
-};
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <HStack w="42%">
+            {/* <Name /> */}
 
-const NavBarContainer = ({ children, ...props }) => {
-  return (
-    <Flex
-      as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      w="100%"
-      mb={8}
-      p={8}
-      bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      color={["white", "white", "primary.700", "primary.700"]}
-      {...props}
-    >
-      {children}
-    </Flex>
-  );
-};
+            <Show breakpoint="(min-width: 1000px)"> {/* <Photo /> */}</Show>
+          </HStack>
 
-export default NavBar;
+          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+            {/* <IconButton
+              size={"md"}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={"Open Menu"}
+              display={{ md: "none" }}
+              onClick={isOpen ? onClose : onOpen}
+            /> */}
+            <HStack spacing={8} alignItems={"center"}>
+              <HStack
+                as={"nav"}
+                spacing={4}
+                display={{ base: "none", md: "flex" }}
+                id="myDIV"
+              >
+                <Button className="btnRes">
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+
+                <Button className="btnRes">
+                  <a href="#About">
+                    <b>About</b>
+                  </a>
+                </Button>
+
+                <Button className="btnRes">
+                  <a href="#Skills">
+                    {" "}
+                    <b>Skills</b>
+                  </a>
+                </Button>
+
+                <Button className="btnRes">
+                  <a href="#Projects">
+                    <b>Projects</b>
+                  </a>
+                </Button>
+
+                <Button className="btnRes">
+                  <a href="#Contact">
+                    <b>Contact</b>
+                  </a>
+                </Button>
+              </HStack>
+            </HStack>
+          </Flex>
+
+          {/* {isOpen ? (
+            <Box pb={4} display={{ md: "none" }}>
+              <Stack as={"nav"} spacing={4}>
+                <Button>
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+                <Button>
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+
+                <Button>
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+                <Button>
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+                <Button>
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+
+                <Button>
+                  <a href="#About">
+                    <b>About</b>
+                  </a>
+                </Button>
+
+                <Button>
+                  <a href="#Skills">
+                    {" "}
+                    <b>Skills</b>
+                  </a>
+                </Button>
+
+                <Button>
+                  <a href="#Projects">
+                    <b>Projects</b>
+                  </a>
+                </Button>
+
+                <Button>
+                  <a href="#Contact">
+                    <b>Contact</b>
+                  </a>
+                </Button>
+              </Stack>
+            </Box>
+          ) : null} */}
+
+          <Flex alignItems={"center"}>
+            <Stack direction={"row"} spacing={7}>
+              <Button onClick={toggleColorMode}>
+                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+              </Button>
+
+              <Button
+                backgroundColor="#a891b7"
+                _hover={{ bg: "#a891b7", color: "black" }}
+                color="white"
+                variant="solid"
+                onClick={onButtonClick}
+                size={["sm", "md"]}
+                download="Shubham_Verma_Resume"
+                id="resumeBtn"
+              >
+                <a
+                  href={Shubham_Verma_Resume}
+                  target="_blank"
+                  download="Shubham_Verma_Resume"
+                >
+                  RESUME
+                </a>
+                {/* <Link
+                    id="navRes"
+                    href={Shubham_Verma_Resume}
+                    target="_blank"
+                    style={{ textDecoration: "none", color: "white" }}
+                    download="Shubham_Verma_Resume"
+                  >
+                    RESUME
+                  </Link> */}
+              </Button>
+            </Stack>
+          </Flex>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          {isOpen ? (
+            <Box pb={4} display={{ md: "none" }}>
+              <Stack as={"nav"} spacing={4}>
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Home">
+                    {" "}
+                    <b>Home</b>
+                  </a>
+                </Button>
+
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#About">
+                    <b>About</b>
+                  </a>
+                </Button>
+
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Skills">
+                    {" "}
+                    <b>Skills</b>
+                  </a>
+                </Button>
+
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Projects">
+                    <b>Projects</b>
+                  </a>
+                </Button>
+
+                <Button
+                  onClick={isOpen ? onClose : onOpen}
+                  _hover={{
+                    textShadow: "#FC0 1px 0 10px",
+                    transform: "scale(1.2)",
+                  }}
+                >
+                  <a href="#Contact">
+                    <b>Contact</b>
+                  </a>
+                </Button>
+              </Stack>
+            </Box>
+          ) : null}
+        </Flex>
+      </Box>
+    </div>
+  );
+}
