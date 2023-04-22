@@ -14,18 +14,23 @@ import {
   Textarea,
   Button,
   ButtonGroup,
+  GridItem,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import "./Footer.css";
 import astroLogo from "../../assets/footericon.svg";
+import paytm from "../../assets/paytm.svg";
+import razorpay from "../../assets/razorpay.svg";
 
-export default function LargeWithNewsletter() {
+import strip from "../../assets/strip.svg";
+
+export default function Footer() {
   return (
-    <Box>
-      <Container as={Stack} maxW={"6xl"} py={10}>
+    <Box maxW={"100%"} mx={"auto"}>
+      <Container as={Stack}>
         <SimpleGrid
-          templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
-          spacing={8}
+          templateColumns={{ sm: "6fr  ", md: "1fr 0.6fr 0.6fr 1fr" }}
+          spacing={6}
         >
           <Stack spacing={6}>
             <Box>
@@ -73,25 +78,83 @@ export default function LargeWithNewsletter() {
                 </li>
               </ul>
             </Box>
-            <Stack direction={"row"} spacing={6}></Stack>
+
+            <Box>
+              <h3>Trusted & Seals</h3>
+              <Box>
+                <a href="#">
+                  <img src="" alt="" />
+                </a>
+                <a href="#">
+                  <img src={razorpay} alt="" />
+                </a>
+                <img src={paytm} alt="" />
+              </Box>
+              <div>
+                <a href="#">
+                  <img src={strip} alt="" />
+                </a>
+              </div>
+            </Box>
           </Stack>
-          <Stack align={"flex-start"}>
-            <Heading>Company</Heading>
-            <Link href={"#"}>About us</Link>
-            <Link href={"#"}>Blog</Link>
-            <Link href={"#"}>Contact us</Link>
-            <Link href={"#"}>Pricing</Link>
-            <Link href={"#"}>Testimonials</Link>
-          </Stack>
-          <Stack align={"flex-start"}>
-            <Heading>Support</Heading>
-            <Link href={"#"}>Help Center</Link>
-            <Link href={"#"}>Terms of Service</Link>
-            <Link href={"#"}>Legal</Link>
-            <Link href={"#"}>Privacy Policy</Link>
-            <Link href={"#"}>Satus</Link>
-          </Stack>
-          <Stack align={"flex-start"}>
+          <SimpleGrid
+            direction={"row"}
+            templateColumns={{ sm: "1fr 1fr" }}
+            spacing={6}
+          >
+            <GridItem
+              display={"flex"}
+              flexDirection={"column"}
+              align={"flex-start"}
+            >
+              <Heading>Company</Heading>
+              <Link href={"#"}>Home </Link>
+
+              <Link href={"#"}> Privacy Policy</Link>
+              <Link href={"#"}>T &C</Link>
+              <Link href={"#"}> Varied Payment</Link>
+            </GridItem>
+            <GridItem
+              display={"flex"}
+              flexDirection={"column"}
+              align={"flex-start"}
+            >
+              <Heading>Support</Heading>
+              <Link href={"#"}>Home </Link>
+
+              <Link href={"#"}> Privacy Policy</Link>
+              <Link href={"#"}>T &C</Link>
+              <Link href={"#"}> Varied Payment</Link>
+            </GridItem>
+
+            <GridItem
+              display={"flex"}
+              flexDirection={"column"}
+              align={"flex-start"}
+            >
+              <Heading>Collaborate</Heading>
+              <Link href={"#"}>Clever Tap</Link>
+              <Link href={"#"}>Exotel</Link>
+              <Link href={"#"}>Facebook</Link>
+              <Link href={"#"}> Quora</Link>
+              <Link href={"#"}>Google</Link>
+              <Link href={"#"}>Youtube</Link>
+            </GridItem>
+            <GridItem
+              display={"flex"}
+              flexDirection={"column"}
+              align={"flex-start"}
+            >
+              <Heading>Important Link</Heading>
+              <Link href={"#"}> Tarot Reader</Link>
+              <Link href={"#"}>Vedic Astrology </Link>
+              <Link href={"#"}>Palmistry </Link>
+              <Link href={"#"}> Gemology</Link>
+              <Link href={"#"}>Vastu</Link>
+              <Link href={"#"}>Numerology</Link>
+            </GridItem>
+          </SimpleGrid>
+          <Stack display={"flex"} flexDirection={"column"} align={"flex-start"}>
             <Heading fontWeight="light">Stay up to date</Heading>
             <Stack direction={"column"}>
               <Input
