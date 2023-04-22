@@ -13,7 +13,7 @@ import "./fonts/Sansation_Bold.ttf";
 export default function App() {
   return (
     <>
-      <nav>
+      {/* <nav>
         <Navigation />
       </nav>
       <main>
@@ -22,7 +22,7 @@ export default function App() {
         <PremiumAstrologers />
         <Solution />
         <Review />
-      </main>
+      </main> */}
       <footer>
         <Footer />
       </footer>

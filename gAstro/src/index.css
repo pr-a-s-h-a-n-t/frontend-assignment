@@ -2,14 +2,10 @@
 
 /* @import url('https://fonts.cdnfonts.com/css/sansation'); */
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
-
+  display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,10 +31,10 @@ body {
   min-height: 100vh;
 }
 
- html {
+html {
 
-   scrollbar-width: normal;
-   scrollbar-color: #BD5300 #F2D2BA;
+  scrollbar-width: normal;
+    scrollbar-color: #BD5300 #F2D2BA;
 }
 
 html::-webkit-scrollbar {
@@ -51,6 +47,7 @@ html::-webkit-scrollbar-thumb {
   border-radius: 10px;
 
 }
+
 html::-webkit-scrollbar-track {
   background-color: #F2D2BA !important;
 }
