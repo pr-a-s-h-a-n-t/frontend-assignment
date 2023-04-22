@@ -1,7 +1,6 @@
 import React from "react";
 
-function PremiumAstrologer() {
-  return <div>i am astrologer</div>;
+export default function PremiumAstrologer() {
+  return <section>i am astrologer</section>;
 }
-
-export default PremiumAstrologer;
+ 

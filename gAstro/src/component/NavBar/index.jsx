@@ -20,8 +20,8 @@ import {
   AddIcon,
 } from "@chakra-ui/icons";
 import tree from "../../assets/tree.svg";
-// import Name from "./Name";
-// import "./Navbar.css";
+
+import "./NavBar.css";
 import Shubham_Verma_Resume from "../../assets/tree.svg";
 
 export default function Navbar() {
@@ -36,13 +36,12 @@ export default function Navbar() {
     <div id="navFix">
       <Box
         bg={useColorModeValue("gray.100", "gray.900")}
-        px={9}
+        px={2}
         width={["100%"]}
       >
         <Flex h={8} alignItems={"center"} justifyContent={"space-between"}>
           <HStack w="100%">
-            {/* <Name /> */}
-
+            "Guruji"
             <Show breakpoint="(min-width: 1000px)">
               {" "}
               <img src={tree} alt="" />

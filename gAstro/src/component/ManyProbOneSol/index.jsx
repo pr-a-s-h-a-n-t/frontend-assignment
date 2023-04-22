@@ -1,7 +1,7 @@
 import React from "react";
 
-function Solution() {
-  return <div>i am Solution</div>;
+export default function Solution() {
+  return <section>i am Solution</section>;
 }
 
-export default Solution;
+ 

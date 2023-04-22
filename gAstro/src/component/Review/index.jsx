@@ -1,7 +1,7 @@
 import React from "react";
 
-function Review() {
-  return <div>i am review</div>;
+export default function Review() {
+  return <section>i am review</section>;
 }
 
-export default Review;
+ 

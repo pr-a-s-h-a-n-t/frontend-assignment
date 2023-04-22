@@ -1,7 +1,11 @@
 import React from "react";
+import "./Testimonial.css";
 
-function UserTestimonial() {
-  return <div>I am testimonial</div>;
+export default function UserTestimonial() {
+  return (
+    <section>
+      <div className="testimonial_wrapper">I am testimonial</div>
+    </section>
+  );
 }
-
-export default UserTestimonial;
+ 

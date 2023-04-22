@@ -1,7 +1,7 @@
 import React from "react";
 
-function index() {
-  return <div>I am footer </div>;
+export default function Footer() {
+  return <section>I am footer </section>;
 }
 
-export default index;
+ 
