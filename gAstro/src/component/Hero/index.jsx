@@ -60,40 +60,48 @@ export default function HeroHead() {
             </div>
           </Box>
         </div> */}
+        <h2 className="hero_heading">“Astrology for Clarity”</h2>
+        <h4 className="hero_sub_heading">
+          Your Name is a Vedic Astrologer and has expertise in Vaastu and Mantra
+          Theraphy{" "}
+        </h4>
+        <Button className="hero_btn">Consult Now</Button>
 
-        <Swiper
-          className="swiper"
-          // install Swiper modules
-          modules={[Autoplay, Pagination, Navigation]}
-          speed={2000}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          loop={true}
-          slidesPerView={1}
-          // navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-        >
-          <SwiperSlide>
-            <img
-              src={herobanner1}
-              width={"100%"}
-              height={"100%"}
-              alt="hero banner"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={heroimg2}
-              width={"100%"}
-              height={"100%"}
-              alt="hero banner"
-            />
-          </SwiperSlide>
-        </Swiper>
+        <div>
+          <Swiper
+            className="swiper"
+            // install Swiper modules
+            modules={[Autoplay, Pagination, Navigation]}
+            speed={2000}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            loop={true}
+            slidesPerView={1}
+            // navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+          >
+            <SwiperSlide>
+              <img
+                src={herobanner1}
+                width={"100%"}
+                height={"100%"}
+                alt="hero banner"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={heroimg2}
+                width={"100%"}
+                height={"100%"}
+                alt="hero banner"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </section>
   );

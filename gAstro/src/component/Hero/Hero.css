@@ -1,50 +1,99 @@
 .hero_container {
     width: 100%;
-    height: clamp(299px, 40vh 580px);
-    
+    height: clamp(299px, 40vh, 580px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         text-align: center;
-    
+    /* margin-top: -2rem; */
+
 }
 
 .hero_container h2 {
+    margin-top: clamp(24px, 5.55vh 80px);
     font-weight: bolder !important;
     font-size: clamp(26px, 3.04vw, 58.4047px);
     line-height: 128%;
-
-    text-align: center;
+    
     letter-spacing: 0.085em;
+
 
 }
 
-.hero_container p {
+.hero_container>p {
     font-weight: 400;
     font-size: clamp(12px, 1.11vw, 16px);
     line-height: 149.69%;
-    display: flex;
-    align-items: center;
-    text-align: center;
+
     letter-spacing: 0.07em;
-    color: #FFFFFF;
+
 
 }
 
-.hero_container button {
+.hero_container>button {
     width: clamp(119px, 15.12vw, 217.83px);
     height: clamp(29px, 4vh, 58.82px);
 
     background: #D97122;
-        border-radius: clamp(29px, 2.98vw, 43.0686px);
-    
+    border-radius: clamp(29px, 2.98vw, 43.0686px);
 }
+
 /* swiper */
 .swiper {
     height: 100% !important;
-    z-index: -1;
+    
 }
 
 .swiper-slide {
+    
     box-sizing: border-box;
     width: 100% !important;
     height: 100% !important;
 }
 
+.hero_heading,
+.hero_sub_heading,
+.hero_btn {
+    position: absolute;
+    color: #FFFFFF;
+    z-index: 10;
+}
+
+.hero_heading {
+    /* top: clamp(24px, 5.55vh 80px); */
+    margin-top: clamp(-10px, 5.55vh, -163px) !important;
+
+}
+
+.hero_sub_heading {
+    /* top: clamp(4px, 7.22vh 104px) !important; */
+    margin-top: 3.5rem !important;
+}
+
+.hero_btn {
+    /* top: 320px; */
+    /* margin-top: 3.5rem !important; */
+
+}
+
+/* @media screen and (max-width: 768px) {
+
+    .hero_heading {
+        top: clamp(24px, 5.55vh 80px);
+        margin-top: -3.5rem !important;
+
+    }
+
+    .hero_sub_heading {
+        top: clamp(4px, 7.22vh 104px) !important;
+        margin-top: 3.5rem !important;
+    }
+
+    .hero_btn {
+        top: 320px;
+        /* margin-top: 3.5rem !important;  
+
+    }
+} */
