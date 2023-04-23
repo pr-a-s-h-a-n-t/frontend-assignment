@@ -23,7 +23,9 @@ export default function App() {
         <Solution />
         {/* <Review /> */}
       </main>
-      <footer>{/* <Footer /> */}</footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
