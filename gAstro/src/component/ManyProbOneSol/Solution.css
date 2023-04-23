@@ -1,0 +1,98 @@
+.solution-heading h2 {
+    font-weight: 700;
+    font-size: clamp(18px, 1.66vw, 32px);
+    line-height: 128%;
+    letter-spacing: 0.085em;
+    color: #D97122;
+
+
+}
+
+.solution-heading {
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8.5px;
+    column-gap: clamp(12px, 0.98vw, 19px);
+}
+
+.solution-heading span>img {
+    width: clamp(13px, 1.4vw, 27px);
+    height: clamp(14px, 1.5vw, 29px);
+}
+
+#all_zodiac_sign {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate_logo {
+    width: clamp(238px, 24vw, 465px);
+    height: clamp(240px, 13.69vh, 457px);
+}
+
+.sun {
+    width: clamp(70px, 9.1vw, 176px);
+    height: clamp(74px, 9.3vh, 180px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .rotate_logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.solutioncard_container {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.solutioncard_container {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.solutioncard_container::-webkit-scrollbar {
+    width: 1px;
+}
+
+.solutioncard_container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.solutioncard_container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {}

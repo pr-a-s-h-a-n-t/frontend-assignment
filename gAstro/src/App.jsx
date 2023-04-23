@@ -15,17 +15,15 @@ export default function App() {
     <>
       {/* <nav>
         <Navigation />
-      </nav>
+      </nav>*/}
       <main>
-        <Hero />
+        {/* <Hero />
         <Testimonial />
-        <PremiumAstrologers />
+        <PremiumAstrologers /> */}
         <Solution />
-        <Review />
-      </main> */}
-      <footer>
-        <Footer />
-      </footer>
+        {/* <Review /> */}
+      </main>
+      <footer>{/* <Footer /> */}</footer>
     </>
   );
 }
