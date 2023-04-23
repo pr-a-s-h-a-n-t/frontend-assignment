@@ -1,54 +1,50 @@
 .hero_container {
     width: 100%;
-    height: 580px;
-    margin: auto;
-    text-align: center;
+    height: clamp(299px, 40vh 580px);
+    
+        text-align: center;
+    
 }
 
-.hero_container h1 {
+.hero_container h2 {
     font-weight: bolder !important;
-    font-size: 58.4047px;
+    font-size: clamp(26px, 3.04vw, 58.4047px);
     line-height: 128%;
-    /* identical to box height, or 75px */
+
     text-align: center;
     letter-spacing: 0.085em;
-    border: 0.614754px solid #FDFDFD;
+
 }
 
-.hero_container h3 {
-    font-size: 16px;
+.hero_container p {
+    font-weight: 400;
+    font-size: clamp(12px, 1.11vw, 16px);
     line-height: 149.69%;
-    /* or 24px */
-
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.07em;
+    color: #FFFFFF;
 
 }
 
-.hero_container .pp {
-    font-weight: bolder !important;
-    font-size: 32px;
-    line-height: 128%;
-    /* identical to box height, or 41px */
+.hero_container button {
+    width: clamp(119px, 15.12vw, 217.83px);
+    height: clamp(29px, 4vh, 58.82px);
 
-    letter-spacing: 0.085em;
-
-    color: #D97122;
-
-
+    background: #D97122;
+        border-radius: clamp(29px, 2.98vw, 43.0686px);
+    
+}
+/* swiper */
+.swiper {
+    height: 100% !important;
+    z-index: -1;
 }
 
-.hero_container .p {
-    font-weight: bolder !important;
-    font-size: 32px;
-    line-height: 128%;
-    /* identical to box height, or 41px */
-
-    letter-spacing: 0.085em;
-
-    color: #D97122;
-
-
+.swiper-slide {
+    box-sizing: border-box;
+    width: 100% !important;
+    height: 100% !important;
 }
+

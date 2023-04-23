@@ -17,8 +17,8 @@ export default function App() {
         <Navigation />
       </nav>
       <main>
-        {/* <Hero />
-        <Testimonial />
+        <Hero />
+        {/*  <Testimonial />
         <PremiumAstrologers /> */}
         <Solution />
         {/* <Review /> */}
