@@ -2,5 +2,67 @@
     width: 100%;
     height: 60vh;
     border: 2px solid black !important;
-    ;
+}
+
+.swiper {
+    height: 300px !important;
+
+}
+
+.swiper-slide {
+    box-sizing: border-box;
+    width: clamp(238px, 19.86vw 286px) !important;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+    color: #ff5f0e;
+    transform: rotate(180deg);
+    background: #ffffff;
+    border: 2px solid #e6e6e6;
+    border-radius: 100%;
+}
+
+.swiper-button-next:after {
+    content: 'prev' !important;
+    font-size: clamp(14px, 1.14vw, 22px) !important;
+}
+
+.swiper-button-prev:after {
+    content: 'next' !important;
+    font-size: clamp(14px, 1.14vw, 22px) !important;
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 19rem !important;
+        width: 28px;
+        height: 28px;
+    }
+
+}
+
+/* @media screen and (min-width: 468px) and (max-width: 1598px) {
+    	.swiper {
+    		height: 225px !important;
+    	}
+    } */
+
+@media screen and (min-width: 1598px) and (max-width: 2020px) {
+    .swiper {
+        height: 425px !important;
+    }
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal,
+.swiper-scrollbar-drag {
+    display: none !important;
 }
