@@ -3,7 +3,7 @@ import education from "../assets/solution/education.svg";
 import health from "../assets/solution/health.svg";
 import hw from "../assets/solution/hw.svg";
 import job from "../assets/solution/job.svg";
-import love from "../assets/solution/love.svg";
+import luv from "../assets/solution/luv.svg";
 import luckynumber from "../assets/solution/luckynumber.svg";
 import marriage from "../assets/solution/marriage.svg";
 import money from "../assets/solution/money.svg";
@@ -12,7 +12,7 @@ import orbit from "../assets/solution/orbit.svg";
 export const problemsArray1 = [
   {
     id: "1",
-    icon: love,
+    icon: luv,
     problemTitle: "Love Related Problem ",
     direction: "row",
   },
