@@ -19,7 +19,7 @@ import {
 import { ReactNode } from "react";
 import "./Footer.css";
 import astroLogo from "../../assets/footericon.svg";
-import paytm from "../../assets/paytm.svg";
+import paytm from "../../assets/paytm.svg"; // changed capital P to small p to fix dp issue!!
 import razorpay from "../../assets/razorpay.svg";
 
 import strip from "../../assets/strip.svg";
