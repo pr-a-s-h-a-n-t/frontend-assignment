@@ -26,88 +26,153 @@ import strip from "../../assets/strip.svg";
 
 export default function Footer() {
   return (
-    <Box maxW={"100%"} mx={"auto"}>
+    <Box
+      className="footer_container"
+      width={"100%"}
+      bgColor={" #BD5300"}
+      color={" #F8F8F8"}
+    >
       <Container as={Stack}>
         <SimpleGrid
-          templateColumns={{ sm: "6fr  ", md: "1fr 0.6fr 0.6fr 1fr" }}
+          width={"100%"}
+          templateColumns={{ sm: "6fr  ", md: "0.6fr 0.6fr 0.6fr  " }}
+          paddingTop={{ base: "20px", lg: "50px" }}
+          paddingBottom={{ base: "20px", lg: "50px" }}
+          paddingLeft={{ base: "20px", sm: "30px", lg: "100px" }}
+          paddingRight={{ base: "20px", sm: "30px", lg: "100px" }}
           spacing={6}
         >
           <Stack spacing={6}>
             <Box>
               <img src={astroLogo} alt="astro logo" />
             </Box>
-            <Text fontSize={"sm"}>
+            <Text
+              fontSize={{ base: "14px", md: "16px" }}
+              lineHeight={{ base: "100%", md: "138.5%" }}
+              width={{ base: "100%", sm: "88%" }}
+            >
               About Guruji s2 to 3 lines what guruji do and how it works About
               Guruji s2 to 3 lines what guruji do and how it works
             </Text>
             <Box
               maxW={"282px"}
-              border={"1px solid black"}
               display={"flex"}
               justifyContent={"flex-start"}
               alignItems={"center"}
-              columnGap={{ base: "5px", sm: "10px", md: "22px" }}
+              columnGap={{ base: "10px", md: "22px" }}
             >
-              <ul>
-                <li>
-                  {" "}
-                  <a href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </a>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <a href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>{" "}
-                </li>
+              <Link>
+                {" "}
+                <a href="#">
+                  <ion-icon
+                    style={{
+                      color: "#1877F2",
+                      backgroundColor: "white",
+                    }}
+                    name="logo-facebook"
+                  ></ion-icon>
+                </a>{" "}
+              </Link>
+              <Link>
+                {" "}
+                <a href="#">
+                  <ion-icon
+                    style={{
+                      background:
+                        "linear-gradient(45deg, #FFC107 14.63%, #F44336 50.5%, #9C27B0 84.66%)",
+                    }}
+                    name="logo-instagram"
+                  ></ion-icon>
+                </a>{" "}
+              </Link>
 
-                <li>
+              <Link>
+                {" "}
+                <a href="#">
                   {" "}
-                  <a href="#">
-                    {" "}
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>{" "}
-                </li>
+                  <ion-icon
+                    style={{
+                      backgroundColor: "white",
+                      color: "#03A9F4",
+                    }}
+                    name="logo-twitter"
+                  ></ion-icon>
+                </a>{" "}
+              </Link>
 
-                <li>
-                  {" "}
-                  <a href="#">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                  </a>{" "}
-                </li>
-              </ul>
+              <Link>
+                {" "}
+                <a href="#">
+                  <ion-icon
+                    style={{
+                      backgroundColor: "white",
+                      color: "#F44336",
+                    }}
+                    name="logo-youtube"
+                  ></ion-icon>
+                </a>{" "}
+              </Link>
             </Box>
 
             <Box>
-              <h3>Trusted & Seals</h3>
-              <Box>
+              <Heading
+                fontSize={{ base: "18px", md: "22px" }}
+                lineHeight={{ base: "90%", md: "110%" }}
+              >
+                Trusted & Seals
+              </Heading>
+              <Box
+                mt={"11px"}
+                display={"flex"}
+                flexDirection={"row"}
+                justifyContent={"flex-start"}
+                align={"center"}
+                columnGap={"17px"}
+                className="payment-container"
+              >
                 <a href="#">
-                  <img src="" alt="" />
+                  <img
+                    style={{ width: "115px", height: "26px" }}
+                    src={razorpay}
+                    alt="razorpay icon"
+                  />
                 </a>
                 <a href="#">
-                  <img src={razorpay} alt="" />
+                  <img
+                    style={{ width: "86", height: "32px" }}
+                    src={paytm}
+                    alt="paytm icon"
+                  />
                 </a>
-                <img src={paytm} alt="" />
               </Box>
-              <div>
+              <Box mt={"16px"} className="payment-container">
                 <a href="#">
-                  <img src={strip} alt="" />
+                  <img
+                    style={{ width: "65px", height: "24px" }}
+                    src={strip}
+                    alt="strip icon"
+                  />
                 </a>
-              </div>
+              </Box>
             </Box>
           </Stack>
           <SimpleGrid
             direction={"row"}
             templateColumns={{ sm: "1fr 1fr" }}
             spacing={6}
+            className="nav-link-wrapper"
           >
             <GridItem
               display={"flex"}
               flexDirection={"column"}
               align={"flex-start"}
             >
-              <Heading>Company</Heading>
+              <Heading
+                fontSize={{ base: "18px", md: "22px" }}
+                lineHeight={{ base: "90%", md: "110%" }}
+              >
+                Company
+              </Heading>
               <Link href={"#"}>Home </Link>
 
               <Link href={"#"}> Privacy Policy</Link>
@@ -119,9 +184,13 @@ export default function Footer() {
               flexDirection={"column"}
               align={"flex-start"}
             >
-              <Heading>Support</Heading>
+              <Heading
+                fontSize={{ base: "18px", md: "22px" }}
+                lineHeight={{ base: "90%", md: "110%" }}
+              >
+                Support
+              </Heading>
               <Link href={"#"}>Home </Link>
-
               <Link href={"#"}> Privacy Policy</Link>
               <Link href={"#"}>T &C</Link>
               <Link href={"#"}> Varied Payment</Link>
@@ -132,7 +201,12 @@ export default function Footer() {
               flexDirection={"column"}
               align={"flex-start"}
             >
-              <Heading>Collaborate</Heading>
+              <Heading
+                fontSize={{ base: "18px", md: "22px" }}
+                lineHeight={{ base: "90%", md: "110%" }}
+              >
+                Collaborate
+              </Heading>
               <Link href={"#"}>Clever Tap</Link>
               <Link href={"#"}>Exotel</Link>
               <Link href={"#"}>Facebook</Link>
@@ -145,7 +219,12 @@ export default function Footer() {
               flexDirection={"column"}
               align={"flex-start"}
             >
-              <Heading>Important Link</Heading>
+              <Heading
+                fontSize={{ base: "18px", md: "22px" }}
+                lineHeight={{ base: "90%", md: "110%" }}
+              >
+                Important Link
+              </Heading>
               <Link href={"#"}> Tarot Reader</Link>
               <Link href={"#"}>Vedic Astrology </Link>
               <Link href={"#"}>Palmistry </Link>
@@ -155,34 +234,81 @@ export default function Footer() {
             </GridItem>
           </SimpleGrid>
           <Stack display={"flex"} flexDirection={"column"} align={"flex-start"}>
-            <Heading fontWeight="light">Stay up to date</Heading>
-            <Stack direction={"column"}>
+            <Heading
+              fontSize={{ base: "18px", md: "22px" }}
+              lineHeight={{ base: "90%", md: "110%" }}
+            >
+              Stay up to date
+            </Heading>
+            <Stack w={{ base: "100%", lg: "70%" }} direction={"column"}>
               <Input
+                color={"#999999"}
                 placeholder={"Your  Name"}
+                fontSize={{ base: "12px", md: "14px" }}
+                lineHeight={{ base: "100%", md: "138.5%" }}
+                paddingTop={"11px"}
+                paddingBottom={"11px"}
+                borderRadius={"6px"}
+                paddingLeft={{ base: "5px", lg: "10px" }}
+                // paddingRight={{ base: "30px", lg: "100px" }}
                 type="name"
-                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                background={"#F8F8F8"}
+                fontWeight={500}
                 border={0}
                 _focus={{
-                  bg: "whiteAlpha.300",
+                  bg: "whiteAlpha.900",
                 }}
               />
               <Input
+                color={"#999999"}
+                fontSize={{ base: "12px", md: "14px" }}
+                lineHeight={{ base: "100%", md: "138.5%" }}
+                paddingTop={"11px"}
+                paddingBottom={"11px"}
+                borderRadius={"6px"}
+                paddingLeft={{ base: "5px", lg: "10px" }}
+                // paddingRight={{ base: "30px", lg: "100px" }}
+                background={"#F8F8F8"}
+                fontWeight={500}
                 placeholder={"Mail ID"}
                 type="email"
-                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
                 border={0}
                 _focus={{
-                  bg: "whiteAlpha.300",
+                  bg: "whiteAlpha.900",
                 }}
               />
 
               <Textarea
-                border={"1px solid black"}
+                color={"#999999"}
+                fontSize={{ base: "12px", md: "14px" }}
+                lineHeight={{ base: "100%", md: "138.5%" }}
+                paddingTop={"11px"}
+                paddingBottom={"11px"}
+                borderRadius={"6px"}
+                paddingLeft={{ base: "5px", lg: "10px" }}
+                // paddingRight={{ base: "30px", lg: "100px" }}
+                background={"#F8F8F8"}
+                fontWeight={500}
                 minHeight="80px"
                 placeholder={"Write Query"}
+                _focus={{
+                  bg: "whiteAlpha.900",
+                }}
               />
-              <Button colorScheme="teal" variant="solid" size="lg">
-                Button
+              <Button
+                w={"100%"}
+                background={" #4B9C0C"}
+                color={"#E9E9E9"}
+                fontWeight={600}
+                fontSize={{ base: "12px", md: "16px" }}
+                lineHeight={{ base: "90%", md: "100%" }}
+                paddingTop={"14px"}
+                paddingBottom={"14px"}
+                borderRadius={" 6px"}
+                variant="solid"
+                size="lg"
+              >
+                Submit
               </Button>
             </Stack>
           </Stack>

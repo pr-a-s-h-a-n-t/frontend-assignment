@@ -1,9 +1,41 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* @import url('https://fonts.cdnfonts.com/css/sansation'); */
-:root {
+
+/*Setting default font for heading  */
+
+
+@font-face {
+  font-family: "Sansation_Light";
+  /*Can be any text*/
+  src: local("Sansation_Light"),
+    url(".\fonts\Sansation_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sansation_Bold";
+  /*Can be any text*/
+  src: local("Sansation_Bold"),
+    url("./fonts/Sansation_Bold.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Sansation_Bold_Italic";
+  /*Can be any text*/
+  src: local("Sansation_Bold"),
+    url("./fonts/Sansation_Bold_Italic.ttf") format("truetype");
+}
+
+
+
+#root {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  scroll-behavior: smooth;
+
   display: flex;
-    flex-grow: 1;
+  flex-grow: 1;
     justify-content: center;
     align-items: center;
   font-synthesis: none;
@@ -13,8 +45,64 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  font-family: 'Poppins' !important;
+  font-style: normal;
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Set font for headings */
+h1,
+h2 {
+  font-family: 'Sansation_Bold' !important;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* --------- */
 a {
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #646cff;
   text-decoration: inherit;
 }
@@ -23,18 +111,12 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 html {
-
+  width: 100vw;
   scrollbar-width: normal;
-    scrollbar-color: #BD5300 #F2D2BA;
+  scrollbar-color: #BD5300 #F2D2BA;
 }
 
 html::-webkit-scrollbar {
