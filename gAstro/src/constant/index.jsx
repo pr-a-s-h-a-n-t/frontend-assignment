@@ -15,30 +15,35 @@ export const problemsArray1 = [
     icon: luv,
     problemTitle: "Love Related Problem ",
     direction: "row",
+    positionProperty: "margin-left",
   },
   {
     id: "2",
     icon: marriage,
     problemTitle: "Marriage Problem  ",
     direction: "row",
+    positionProperty: "margin-left",
   },
   {
     id: "3",
     icon: job,
     problemTitle: "Job/Business Problems",
     direction: "row",
+    positionProperty: "margin-left",
   },
   {
     id: "4",
     icon: money,
     problemTitle: "Money Problem ",
     direction: "row",
+    positionProperty: "margin-left",
   },
   {
     id: "5",
     icon: education,
     problemTitle: "Education Problems",
     direction: "row",
+    positionProperty: "margin-left",
   },
 ];
 
@@ -48,12 +53,14 @@ export const problemsArray2 = [
     icon: health,
     problemTitle: "Health Problems  ",
     direction: "row-reverse",
+    positionProperty: "margin-right",
   },
   {
     id: "2",
     icon: orbits,
     problemTitle: "Grah Shanti",
     direction: "row-reverse",
+    positionProperty: "margin-right",
   },
 
   {
@@ -61,17 +68,20 @@ export const problemsArray2 = [
     icon: child,
     problemTitle: "Child Birth Issues",
     direction: "row-reverse",
+    positionProperty: "margin-right",
   },
   {
     id: "4",
     icon: hw,
     problemTitle: "Husband Wife Problems ",
     direction: "row-reverse",
+    positionProperty: "margin-right",
   },
   {
     id: "5",
     icon: luckynumber,
     problemTitle: "Lucky Number / Color",
     direction: "row-reverse",
+    positionProperty: "margin-right",
   },
 ];

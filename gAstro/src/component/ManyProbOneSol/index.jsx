@@ -76,12 +76,20 @@ export default function Solution() {
                 className="rotate_logo"
                 src={allzodiacSignCircle}
                 alt="zodiac Sign icon"
+                style={{
+                  // maxWidth: "70%",
+                  // maxHeight: "70%",
+                  borderRadius: " 50%",
+                }}
               />
               <img
                 className="sun"
                 style={{
                   position: "absolute",
                   zIindex: " -1",
+                  // width: "20%",
+                  // height: "20%",
+                  borderRadius: " 50%",
                 }}
                 src={sun}
                 alt="sun icon"

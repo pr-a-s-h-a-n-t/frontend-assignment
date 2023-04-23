@@ -1,0 +1,12 @@
+.nav_icon img {
+    width: clamp(181px, 12vw, 232px);
+    height: clamp(50px, 3.4vh, 66px);
+
+}
+
+.nav_container {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    /* color: #FCFCFC; */
+}

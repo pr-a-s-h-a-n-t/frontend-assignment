@@ -13,9 +13,9 @@ import "./fonts/Sansation_Bold.ttf";
 export default function App() {
   return (
     <>
-      {/* <nav>
+      <nav>
         <Navigation />
-      </nav>*/}
+      </nav>
       <main>
         {/* <Hero />
         <Testimonial />
