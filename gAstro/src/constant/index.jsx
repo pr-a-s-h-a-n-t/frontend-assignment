@@ -7,7 +7,7 @@ import luv from "../assets/solution/luv.svg";
 import luckynumber from "../assets/solution/luckynumber.svg";
 import marriage from "../assets/solution/marriage.svg";
 import money from "../assets/solution/money.svg";
-import orbit from "../assets/solution/orbit.svg";
+import orbits from "../assets/solution/orbits.svg";
 
 export const problemsArray1 = [
   {
@@ -51,7 +51,7 @@ export const problemsArray2 = [
   },
   {
     id: "2",
-    icon: orbit,
+    icon: orbits,
     problemTitle: "Grah Shanti",
     direction: "row-reverse",
   },
