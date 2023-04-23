@@ -140,7 +140,7 @@ export default function Footer() {
                 <a href="#">
                   <img
                     style={{ width: "86", height: "32px" }}
-                    src={paytm}
+                    src={pytm}
                     alt="paytm icon"
                   />
                 </a>
