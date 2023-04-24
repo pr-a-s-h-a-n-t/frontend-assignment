@@ -1,16 +1,20 @@
 .hero_container {
     width: 100%;
-    height: clamp(299px, 40vh, 580px);
-        position: relative;
+    height: clamp(299px, 40vh, 580px) !important;
+        /* height: 580px; */
+        border: 2px solid red;
+        /* position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        text-align: center;
+            */
+    text-align: center;
     /* margin-top: -2rem; */
 
 }
 
+/* 
 .hero_container h2 {
     margin-top: clamp(24px, 5.55vh 80px);
     font-weight: bolder !important;
@@ -40,8 +44,9 @@
     border-radius: clamp(29px, 2.98vw, 43.0686px);
 }
 
+*/
 /* swiper */
-.swiper {
+/* .swiper {
     height: 100% !important;
     
 }
@@ -53,7 +58,8 @@
     height: 100% !important;
 }
 
-.hero_heading,
+*/
+/* .hero_heading,
 .hero_sub_heading,
 .hero_btn {
     position: absolute;
@@ -62,22 +68,26 @@
 }
 
 .hero_heading {
-    /* top: clamp(24px, 5.55vh 80px); */
+    top: clamp(24px, 5.55vh 80px);
     margin-top: clamp(-10px, 5.55vh, -163px) !important;
 
 }
 
-.hero_sub_heading {
-    /* top: clamp(4px, 7.22vh 104px) !important; */
+*/
+/* .hero_sub_heading {
+    top: clamp(4px, 7.22vh 104px) !important;
     margin-top: 3.5rem !important;
 }
 
+*/
+/* 
 .hero_btn {
-    /* top: 320px; */
-    /* margin-top: 3.5rem !important; */
+    top: 320px;
+        margin-top: 3.5rem !important;
 
 }
 
+*/
 /* @media screen and (max-width: 768px) {
 
     .hero_heading {
@@ -96,4 +106,6 @@
         /* margin-top: 3.5rem !important;  
 
     }
-} */
+}
+
+*/

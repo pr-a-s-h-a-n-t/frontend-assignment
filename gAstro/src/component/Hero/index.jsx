@@ -10,6 +10,8 @@ import secure from "../../assets/hero/secure.svg";
 import support from "../../assets/hero/support.svg";
 import verified from "../../assets/hero/verified.svg";
 
+import CommonCarousel from "../../common/commonCarousel";
+
 // import Swiper core and required modules
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
@@ -60,15 +62,20 @@ export default function HeroHead() {
             </div>
           </Box>
         </div> */}
-        <h2 className="hero_heading">“Astrology for Clarity”</h2>
+        {/* <h2 className="hero_heading">“Astrology for Clarity”</h2>
         <h4 className="hero_sub_heading">
           Your Name is a Vedic Astrologer and has expertise in Vaastu and Mantra
           Theraphy{" "}
         </h4>
-        <Button className="hero_btn">Consult Now</Button>
+        <Button className="hero_btn">Consult Now</Button> */}
 
-        <div>
-          <Swiper
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {/* <Swiper
             className="swiper"
             // install Swiper modules
             modules={[Autoplay, Pagination, Navigation]}
@@ -100,7 +107,8 @@ export default function HeroHead() {
                 alt="hero banner"
               />
             </SwiperSlide>
-          </Swiper>
+          </Swiper> */}
+          <CommonCarousel data={banner} />
         </div>
       </div>
     </section>

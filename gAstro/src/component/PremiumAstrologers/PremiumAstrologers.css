@@ -1,0 +1,25 @@
+.CommonCard-heading h2 {
+    font-weight: 700;
+    font-size: clamp(18px, 2.22vw, 32px);
+    line-height: 128%;
+    letter-spacing: 0.085em;
+    color: #D97122;
+
+
+}
+
+.CommonCard-heading {
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8.5px;
+    column-gap: clamp(12px, 1.31vw, 19px);
+}
+
+.CommonCard-heading span>img {
+    width: clamp(13px, 1.875vw, 27px);
+    height: clamp(14px, 2vw, 29px);
+}

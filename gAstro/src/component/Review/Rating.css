@@ -1,0 +1,17 @@
+ .on {
+     color: goldenrod;
+ }
+
+ .off {
+     color: #ccc;
+ }
+
+ /* .star {
+     font-size: 4rem;
+ } */
+
+ .star-rating {
+     display: flex;
+     margin: auto;
+     width: fit-content;
+ }

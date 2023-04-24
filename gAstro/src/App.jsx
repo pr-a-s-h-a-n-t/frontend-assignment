@@ -19,9 +19,9 @@ export default function App() {
       <main>
         {/* <Hero /> */}
         <Testimonial />
-        {/*   <PremiumAstrologers /> */}
+        <PremiumAstrologers />
         <Solution />
-        {/* <Review /> */}
+        <Review />
       </main>
       <footer>
         <Footer />
