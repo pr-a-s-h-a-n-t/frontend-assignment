@@ -1,7 +1,7 @@
 import React from "react";
 import CommonCard from "../../common/CommonCards";
 import "./PremiumAstrologers.css";
-import Star from "../../assets/Star.svg";
+import Star from "../../assets/star.svg";
 import { Heading } from "@chakra-ui/react";
 
 export default function PremiumAstrologer() {
