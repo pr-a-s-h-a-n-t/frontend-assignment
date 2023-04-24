@@ -121,13 +121,13 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    height: 84px;
+    height: clamp(60px, 5.55vh, 84px);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 1rem;
-    bottom: 3rem;
+    bottom: 6rem;
 }
 
 .swiper-pagination-bullet-active {
@@ -155,10 +155,8 @@
 
     line-height: 128%;
     text-align: center;
+    margin-top: 1rem;
 
-    position: absolute;
-    bottom: 0.5rem;
-    left: 45%;
     letter-spacing: 0.085em;
 
     color: #AC5A1D;
