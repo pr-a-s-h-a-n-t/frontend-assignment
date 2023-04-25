@@ -1,7 +1,13 @@
 import React from "react";
 import { Image, Heading, Text, Box, Button } from "@chakra-ui/react";
 import HeroSlider, { Overlay, Slide, MenuNav } from "hero-slider";
+import pandc from "../../assets/hero/pc.svg";
+import refund from "../../assets/hero/refund2.svg";
+import secure from "../../assets/hero/secure.svg";
+import support from "../../assets/hero/support.svg";
+import verified from "../../assets/hero/verified.svg";
 // import Swiper core and required modules
+
 import {
   Navigation,
   Pagination,
@@ -22,46 +28,12 @@ import "swiper/css/scrollbar";
 import "./CommonCarousel.css";
 function CommonCarousel({ data, autoplay }) {
   return (
-    // <Swiper
-    //   className="swiper"
-    //   // install Swiper modules
-    //   modules={[Autoplay, Pagination, Navigation]}
-    //   // speed={2000}
-    //   // autoplay={{
-    //   //   delay: 3000,
-    //   //   disableOnInteraction: false,
-    //   //   pauseOnMouseEnter: true,
-    //   // }}
-    //   spaceBetween={0}
-    //   loop={true}
-    //   slidesPerView={"auto"}
-    //   // navigation
-    //   pagination={{ clickable: true }}
-    //   scrollbar={{ draggable: true }}
-    //   direction={"horizontal"}
-    // >
-    //   {data?.map((ele, index) => {
-    //     return (
-    //       <SwiperSlide key={ele} className="swiper-slide">
-    //         {" "}
-    //         <Image
-    //           className="swiper-content"
-    //           src={ele}
-    //           width={"100%"}
-    //           height={"100%"}
-    //           style={{
-    //             height: "300px",
-    //           }}
-    //           alt="profile icon"
-    //         />{" "}
-    //       </SwiperSlide>
-    //     );
-    //   })}
-    // </Swiper>
     <div
-      style={{
-        height: "300px",
-      }}
+      style={
+        {
+          // height: "300px !important",
+        }
+      }
     >
       <HeroSlider
         settings={{
@@ -70,12 +42,12 @@ function CommonCarousel({ data, autoplay }) {
           shouldAutoplay: true,
           shouldDisplayButtons: false,
           autoplayDuration: 5000,
-          // height: "100%",
-          // zIndex: "-1",
+          height: "50vh",
+          zIndex: "1",
         }}
         className="hero-slider"
         // zIndex={"-1"}
-        autoplay
+        // autoplay
         controller={{
           initialSlide: 1,
           slidingDuration: 500,
@@ -100,7 +72,7 @@ function CommonCarousel({ data, autoplay }) {
               Mantra Theraphy{" "}
             </Text>
             <Button>Consult Now</Button>
-            {/* <Box
+            <Box
               display={"flex"}
               justifyContent={"center"}
               columnGap={{ bace: "12px", sm: "30px", lg: "50px" }}
@@ -125,13 +97,13 @@ function CommonCarousel({ data, autoplay }) {
                 <img src={secure} alt="secure payment icon" />
                 <h3>Secure Payment</h3>
               </div>
-            </Box> */}
+            </Box>
           </div>
         </Overlay>
 
         <Slide
           shouldRenderMask
-          label="Giau Pass - Italy"
+          label=" "
           background={{
             backgroundImageSrc: data[0],
             backgroundAttachment: "fixed",
@@ -140,7 +112,7 @@ function CommonCarousel({ data, autoplay }) {
 
         <Slide
           shouldRenderMask
-          label="Bogliasco - Italy"
+          label=" "
           background={{
             backgroundImageSrc: data[1],
             backgroundAttachment: "fixed",

@@ -1,5 +1,4 @@
 import React from "react";
-import "./Testimonial.css";
 // UserTestimonial
 
 // import Swiper core and required modules
@@ -17,6 +16,7 @@ import { Text } from "@chakra-ui/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "./Testimonial.css";
 
 import { carouselImage } from "../../constant/index";
 export default function UserTestimonial() {
@@ -25,7 +25,7 @@ export default function UserTestimonial() {
       <div>
         <Swiper
           // install Swiper modules
-
+          id="testimonial_swiper"
           roundLengths={true}
           centeredSlides={true}
           loop={true}
@@ -38,11 +38,11 @@ export default function UserTestimonial() {
             scale: 1,
             depth: 150,
           }}
-          modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
+          modules={[Navigation, Scrollbar, A11y, EffectCoverflow]}
           spaceBetween={100}
           navigation
           slidesPerView={1}
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           breakpoints={{
             200: {
@@ -67,7 +67,7 @@ export default function UserTestimonial() {
           {carouselImage?.map((ele, index) => {
             return (
               <div key={ele.id} className={""}>
-                <SwiperSlide>
+                <SwiperSlide id="testimonial_slider">
                   <div className={""}>
                     <img src={ele.img} alt="user icon" />
                   </div>

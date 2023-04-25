@@ -53,34 +53,13 @@ export default function Review() {
             roundLengths={true}
             centeredSlides={true}
             loop={true}
-            effect="coverflow"
             speed={1000}
             slideToClickedSlide={true}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             navigation
             slidesPerView={1}
-            // pagination={{ clickable: true }}
             pagination={pagination}
             scrollbar={{ draggable: true }}
-            // breakpoints={{
-            //   200: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 20,
-            //   },
-            //   468: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 45,
-            //   },
-
-            //   768: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 55,
-            //   },
-            //   1268: {
-            //     slidesPerView: 3,
-            //     spaceBetween: 70,
-            //   },
-            // }}
           >
             {userReview?.map((ele, index) => {
               return (
@@ -106,10 +85,7 @@ export default function Review() {
           </Swiper>
         </div>{" "}
         <Box width={"100%"}>
-          <img
-          width="100%"
-         
-           src={reviewSectionbottomicon} alt="style icon" />
+          <img width="100%" src={reviewSectionbottomicon} alt="style icon" />
         </Box>
       </Box>
     </section>

@@ -34,10 +34,12 @@ export default function Navbar() {
     <Box
       style={{
         background: " rgba(255, 236, 221, 0.2)",
+        position: "absolute",
+        zIndex: " 20",
+        color: "white",
       }}
       p={6}
       width={["100%"]}
-      border={"1px solid black"}
     >
       <Flex h={8} px={6} alignItems={"center"} justifyContent={"space-between"}>
         <Box>
@@ -52,7 +54,7 @@ export default function Navbar() {
             <Box
               style={{
                 border: "1px solid black",
-                backgroundColor: "gray",
+                background: " rgba(255, 236, 221, 0.2)",
                 height: "180px",
                 color: "white",
                 display: "flex",
@@ -65,7 +67,7 @@ export default function Navbar() {
                 padding: " 0 1rem",
                 position: "absolute",
                 left: "0px",
-                top: "5rem",
+                top: "0px",
               }}
               // pt={8}
               // px={4}
@@ -125,17 +127,17 @@ export default function Navbar() {
             </Box>
           ) : null}
         </Box>
-        <HStack className="nav_icon">
-          <img
-            src={navIcon}
-            // width={"100%"}
-            // height={"100%"}
-            alt="website logo"
-          />
-        </HStack>
 
         <Flex h={10} alignItems={"center"} justifyContent={"space-between"}>
-          <HStack width={["100%"]} spacing={8} alignItems={"center"}>
+          <HStack
+            width={["100%"]}
+            spacing={8}
+            alignItems={"center"}
+            justifyContent={"space-between"}
+          >
+            <HStack className="nav_icon">
+              <img src={navIcon} alt="website logo" />
+            </HStack>
             <HStack
               as={"nav"}
               spacing={8}
@@ -173,9 +175,6 @@ export default function Navbar() {
                 height: " clamp(90px, 2.5vh, 48px)",
               }}
             >
-              {/* <Button onClick={toggleColorMode}>
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button> */}
               <img
                 src={usericon}
                 width={"100%"}

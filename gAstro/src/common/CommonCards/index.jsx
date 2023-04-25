@@ -4,16 +4,19 @@ import Live from "../../assets/ytubelive.svg";
 import { Box, Button, Heading, Image } from "@chakra-ui/react";
 import { clamp } from "framer-motion";
 
-export default function CommonCard() {
+export default function CommonCard({ img }) {
   return (
     <Box
       sx={{
-        boxSize: "border-box",
-        width: "clamp(261px, 21vw, 310px)",
+        width: "clamp(260px, 21vw, 310px)",
         height: " clamp(347px, 25vh, 380px)",
-        border: "1px solid black",
+
         position: " relative",
         padding: { base: "7px", sm: "10px" },
+        backgroundImage: `url("${img}")`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: " cover",
+        margin: "1rem 0",
 
         background:
           "radial-gradient(69.29% 49.88% at 102.32% 101.97%, rgba(0, 0, 0, 0.7) 12.59%, rgba(0, 0, 0, 0.372048) 45.56%, rgba(0, 0, 0, 0) 100%) ",
