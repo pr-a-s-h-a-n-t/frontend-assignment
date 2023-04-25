@@ -34,12 +34,12 @@
 
 .rotate_logo {
     width: clamp(238px, 32vw, 465px);
-        height: clamp(240px, 31.69vh, 457px);
+        /* height: clamp(240px, 31.69vh, 457px); */
 }
 
 .sun {
     width: clamp(70px, 12.22vw, 176px);
-        height: clamp(74px, 12.88vh, 180px);
+        /* height: clamp(74px, 12.88vh, 180px); */
 }
 
 @media (prefers-reduced-motion: no-preference) {

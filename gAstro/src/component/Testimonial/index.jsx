@@ -16,7 +16,7 @@ import { Box, Text, Button } from "@chakra-ui/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import styles from "./Testimonial.module.css";
+import styles from "../styles/Testimonial.module.css";
 
 import { carouselImage } from "../../constant/index";
 
@@ -44,7 +44,7 @@ export default function UserTestimonial() {
           </span>
         </div>
       </div>
-      <div>
+      <div className={styles.testimonial_swiper}>
         <Swiper
           // install Swiper modules
           className={styles.testimonial_swiper}
@@ -88,8 +88,8 @@ export default function UserTestimonial() {
         >
           {carouselImage?.map((ele, index) => {
             return (
-              <div key={ele.id} className={""}>
-                <SwiperSlide className={styles.testimonial_slider}>
+              <div key={ele.id} className={styles.testimonial_slider}>
+                <SwiperSlide>
                   <div className={""}>
                     <img src={ele.img} alt="user icon" />
                   </div>
