@@ -11,21 +11,43 @@ import {
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Text } from "@chakra-ui/react";
+import { Box, Text, Button } from "@chakra-ui/react";
 // Import Swiper "" "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "./Testimonial.css";
+import styles from "./Testimonial.module.css";
 
 import { carouselImage } from "../../constant/index";
+
+//hero slider
+import HeroSlider, { Overlay, Slide, MenuNav } from "hero-slider";
+import section2secondimg from "../../assets/section2secondimg.svg";
+import heroSectionCarousel from "../../assets/heroSectionCarousel.svg";
+
+import Star from "../../assets/star.svg";
+
 export default function UserTestimonial() {
+  const banner = [section2secondimg, heroSectionCarousel];
   return (
     <section>
+      <div className={styles.UserTestimonial_container}>
+        <div className={styles.UserTestimonial_heading}>
+          <span>
+            <img src={Star} alt="star icon" />
+          </span>
+          <span>
+            <h2>User Testimonial</h2>
+          </span>
+          <span>
+            <img src={Star} alt="star icon" />
+          </span>
+        </div>
+      </div>
       <div>
         <Swiper
           // install Swiper modules
-          id="testimonial_swiper"
+          className={styles.testimonial_swiper}
           roundLengths={true}
           centeredSlides={true}
           loop={true}
@@ -67,7 +89,7 @@ export default function UserTestimonial() {
           {carouselImage?.map((ele, index) => {
             return (
               <div key={ele.id} className={""}>
-                <SwiperSlide id="testimonial_slider">
+                <SwiperSlide className={styles.testimonial_slider}>
                   <div className={""}>
                     <img src={ele.img} alt="user icon" />
                   </div>
@@ -77,6 +99,55 @@ export default function UserTestimonial() {
           })}
         </Swiper>
       </div>
+      {/* className={styles.testimonial_heroslider} */}
+      <Box>
+        <HeroSlider
+          className={styles.testimonial_heroslider}
+          orientation="horizontal"
+          initialSlide={1}
+          onBeforeChange={(previousSlide, nextSlide) =>
+            console.log("onBeforeChange", previousSlide, nextSlide)
+          }
+          onChange={(nextSlide) => console.log("onChange", nextSlide)}
+          onAfterChange={(nextSlide) => console.log("onAfterChange", nextSlide)}
+          // style={{
+          //   height: "clamp(299px, 40vh, 580px)  ",
+          // }}
+          autoplay
+          settings={{
+            slidingDuration: 500,
+            slidingDelay: 100,
+            shouldAutoplay: true,
+            shouldDisplayButtons: false,
+            autoplayDuration: 5000,
+          }}
+        >
+          <Slide
+            shouldRenderMask
+            label=" "
+            background={{
+              backgroundImageSrc: banner[0],
+              backgroundAttachment: "fixed",
+              backgroundSize: "contain ",
+              backgroundRepeat: "no-repeat",
+              backfaceVisibility: "hidden",
+            }}
+          />
+
+          <Slide
+            shouldRenderMask
+            label=" "
+            background={{
+              backgroundImageSrc: banner[1],
+              backgroundAttachment: "fixed",
+              backgroundSize: "contain ",
+              backgroundRepeat: "no-repeat",
+              backfaceVisibility: "hidden",
+            }}
+          />
+          {/* <MenuNav /> */}
+        </HeroSlider>
+      </Box>
     </section>
   );
 }

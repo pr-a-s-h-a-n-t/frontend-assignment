@@ -89,6 +89,19 @@
 } */
 
 
+@media screen and (max-width: 568px) {
+    .swiper {
+        width: 95% !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 20px !important;
+        height: 30px;
+
+        top: 60% !important;
+    }
+}
 
 @media screen and (min-width: 1598px) and (max-width: 2020px) {
     .swiper {

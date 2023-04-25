@@ -26,17 +26,20 @@ export default function PremiumAstrologer() {
         <Box
           p={4}
           // w="100%"
-          // height={{ base: "380px", lg: "auto" }}
-          // // maxW="100%"
-          // m="auto"
-          // justifyContent={{ lg: "center" }}
-          // display={"flex"}
-          // flexDirection={{ base: "row", lg: "column" }}
-          // flexWrap={{ base: "no-wrap", lg: "wrap" }}
-          // overflowX={{ base: "scroll", lg: "none" }}
-          // rowGap={"1rem"}
-          // columnGap={"1rem"}
+          height={{ base: "410px", lg: "auto" }}
+          // maxW="100%"
+          m="auto"
+          justifyContent={{ lg: "center" }}
+          display={"flex"}
+          flexDirection={{ base: "row" }}
+          flexWrap={{ base: "no-wrap", lg: "wrap" }}
+          overflowX={{ base: "scroll", lg: " " }}
+          rowGap={"1rem"}
+          columnGap={"1rem"}
           className="wrapper"
+          // sx={{
+          //   flexDirection: { base: "row" },
+          // }}
         >
           {carouselImage?.map((ele, index) => {
             return <CommonCard key={ele.id} img={ele.img} />;

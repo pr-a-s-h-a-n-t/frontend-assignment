@@ -15,7 +15,8 @@
     margin-top: -1.5rem;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+        width: 100%;
 }
 
 .hero-slider {}
@@ -57,7 +58,7 @@
 .index-module_Slide__vy4u2,
 .index-module_Container__zFpuF,
 .HeroSlider-module_Wrapper__TaeBr {
-    height: clamp(299px, 40vh, 580px) !important;
+    height: clamp(399px, 40vh, 580px) !important;
 }
 
 .index-module_Button__hkx4Z svg {
@@ -104,4 +105,7 @@
         width: 98% !important;
         margin: auto;
     }
+        .hero_stats {
+            width: 98%;
+        }
 }

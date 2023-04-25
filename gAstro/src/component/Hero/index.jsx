@@ -38,6 +38,7 @@ export default function HeroHead() {
       >
         <HeroSlider
           orientation="horizontal"
+          id
           initialSlide={1}
           onBeforeChange={(previousSlide, nextSlide) =>
             console.log("onBeforeChange", previousSlide, nextSlide)
