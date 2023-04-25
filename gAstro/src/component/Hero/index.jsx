@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero.css";
+import "./Hero.scss";
 import herobanner1 from "../../assets/heroSectionCarousel.svg";
 import heroimg2 from "../../assets/heroimg2.svg";
 import HeroSlider, { Overlay, Slide, MenuNav } from "hero-slider";
@@ -37,6 +37,7 @@ export default function HeroHead() {
         }}
       >
         <HeroSlider
+          className="banner_hero_slider"
           orientation="horizontal"
           id
           initialSlide={1}

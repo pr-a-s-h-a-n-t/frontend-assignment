@@ -8,6 +8,7 @@ import {
   Scrollbar,
   A11y,
   EffectCoverflow,
+  // autoplay,
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,8 +17,8 @@ import { Box, Text, Button, Image } from "@chakra-ui/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import styles from "../styles/Testimonial.module.css";
-
+// import styles from "../styles/Testimonial.module.scss";
+import "../styles/Testimonial.scss";
 import { carouselImage } from "../../constant/index";
 
 //hero slider
@@ -30,8 +31,13 @@ import Star from "../../assets/star.svg";
 export default function UserTestimonial() {
   const banner = [section2secondimg, heroSectionCarousel];
   return (
-    <section>
-      <div className={styles.UserTestimonial_container}>
+    <section
+      style={{
+        background: "#FFEFE3",
+      }}
+    >
+      <div className="testmonial_wrapper"></div>
+      <div className=" UserTestimonial_container">
         <Image
           sx={{
             width: { base: "43px", sm: "72px", lg: "95px" },
@@ -40,7 +46,7 @@ export default function UserTestimonial() {
           src={Sun}
           alt="sun icon"
         />
-        <div className={styles.UserTestimonial_heading}>
+        <div className=" UserTestimonial_heading">
           <span>
             <img src={Star} alt="star icon" />
           </span>
@@ -52,65 +58,73 @@ export default function UserTestimonial() {
           </span>
         </div>
       </div>
-      <div className={styles.testimonial_swiper}>
+      <div className="testimonial_swiper_wrapper">
         <Swiper
           // install Swiper modules
-          className={styles.testimonial_swiper}
-          roundLengths={true}
-          centeredSlides={true}
-          loop={true}
-          effect="coverflow"
-          speed={1000}
-          slideToClickedSlide={true}
-          coverflowEffect={{
-            rotate: 0,
-            slideShadows: false,
-            scale: 1,
-            depth: 150,
-          }}
-          modules={[Navigation, Scrollbar, A11y, EffectCoverflow]}
-          spaceBetween={100}
-          navigation
-          slidesPerView={1}
-          // pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+          // className="testimonial_swiper"
+          className="swiper_container"
           breakpoints={{
             200: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              // spaceBetween: 20,
             },
             468: {
               slidesPerView: 2,
-              spaceBetween: 45,
+              // spaceBetween: 45,
             },
 
             768: {
               slidesPerView: 3,
-              spaceBetween: 55,
+              // spaceBetween: 55,
             },
             1268: {
               slidesPerView: 3,
-              spaceBetween: 70,
+              // spaceBetween: 70,
             },
           }}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          parallax={true}
+          autoplay={5000}
+          speed={800}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
         >
           {carouselImage?.map((ele, index) => {
             return (
-              <div key={ele.id} className={styles.testimonial_slider}>
+              <div key={ele.id} className="testimonial_slider">
                 <SwiperSlide>
-                  <div className={""}>
-                    <img src={ele.img} alt="user icon" />
-                  </div>
+                  {/* <div className={""}> */}
+                  <img src={ele.img} alt="user icon" />
+                  {/* </div> */}
                 </SwiperSlide>
               </div>
             );
           })}
+          <div className="slider_controler">
+            <div className="swiper-button-prev slider-arrow"></div>
+            <div className="swiper-button-next slider-arrow"></div>
+          </div>
         </Swiper>
       </div>
       {/* className={styles.testimonial_heroslider} */}
-      <Box>
+
+      <Box className="testimonial_bottom_slider">
         <HeroSlider
-          className={styles.testimonial_heroslider}
+          className="testimonial_heroslider"
           orientation="horizontal"
           initialSlide={1}
           onBeforeChange={(previousSlide, nextSlide) =>
@@ -118,9 +132,6 @@ export default function UserTestimonial() {
           }
           onChange={(nextSlide) => console.log("onChange", nextSlide)}
           onAfterChange={(nextSlide) => console.log("onAfterChange", nextSlide)}
-          // style={{
-          //   height: "clamp(299px, 40vh, 580px)  ",
-          // }}
           autoplay
           settings={{
             slidingDuration: 500,
@@ -139,6 +150,7 @@ export default function UserTestimonial() {
               backgroundSize: "contain ",
               backgroundRepeat: "no-repeat",
               backfaceVisibility: "hidden",
+              height: "20vh",
             }}
           />
 
@@ -151,9 +163,10 @@ export default function UserTestimonial() {
               backgroundSize: "contain ",
               backgroundRepeat: "no-repeat",
               backfaceVisibility: "hidden",
+              height: "20vh",
             }}
           />
-          {/* <MenuNav /> */}
+          <MenuNav />
         </HeroSlider>
       </Box>
     </section>

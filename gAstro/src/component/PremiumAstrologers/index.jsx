@@ -45,7 +45,11 @@ export default function PremiumAstrologer() {
             return <CommonCard key={ele.id} img={ele.img} />;
           })}
         </Box>
-        <Box>
+        <Box
+          sx={{
+            width: "100%",
+          }}
+        >
           <img width={"100%"} src={bottomImg} alt="section bottom img" />
         </Box>
       </Box>
