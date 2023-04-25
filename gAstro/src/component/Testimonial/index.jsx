@@ -11,7 +11,7 @@ import {
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text, Button, Image } from "@chakra-ui/react";
 // Import Swiper "" "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -24,7 +24,7 @@ import { carouselImage } from "../../constant/index";
 import HeroSlider, { Overlay, Slide, MenuNav } from "hero-slider";
 import section2secondimg from "../../assets/section2secondimg.svg";
 import heroSectionCarousel from "../../assets/heroSectionCarousel.svg";
-
+import Sun from "../../assets/centerSun.svg";
 import Star from "../../assets/star.svg";
 
 export default function UserTestimonial() {
@@ -32,6 +32,14 @@ export default function UserTestimonial() {
   return (
     <section>
       <div className={styles.UserTestimonial_container}>
+        <Image
+          sx={{
+            width: { base: "43px", sm: "72px", lg: "95px" },
+            margin: "auto",
+          }}
+          src={Sun}
+          alt="sun icon"
+        />
         <div className={styles.UserTestimonial_heading}>
           <span>
             <img src={Star} alt="star icon" />

@@ -1,6 +1,6 @@
 .testimonial_wrapper {
     width: 100%;
-    height: 60vh;
+    /* height: 60vh; */
     border: 2px solid black !important;
 
 }
@@ -38,10 +38,11 @@
 
 
 
-.testimonial_swiper .swiper {
+.testimonial_swiper>.swiper {
     /* height: 300px !important; */
     width: 100% !important;
     height: 370px !important;
+    padding-top: 2rem;
 }
 
 .testimonial_slider {
@@ -50,16 +51,16 @@
 }
 
 
-.testimonial_swiper>.swiper-button-next,
+.testimonial_slider.swiper-button-next,
 .swiper-button-prev {
     border-radius: 100%;
-    width: 48px;
-    height: 48px;
+    width: 48px !important;
+    height: 48px !important;
     color: #ff5f0e;
     transform: rotate(180deg);
     background: #ffffff;
     border: 2px solid #e6e6e6;
-    border-radius: 100%;
+    border-radius: 100% !important;
 }
 
 #testimonial_swiper>.swiper-button-next:after {
@@ -83,15 +84,18 @@
         height: 28px;
     }
 
+        .UserTestimonial_container {
+            padding-top: 4rem;
+        }
 }
 
-/* @media screen and (min-width: 468px) and (max-width: 1598px) {
-    .swiper {
-            height: 225px !important;
-        }
+@media screen and (max-width: 770px) {
+
+    .UserTestimonial_container {
+        padding-top: 6rem;
+
     }
-    
-    */
+}
 
 @media screen and (min-width: 1598px) and (max-width: 2020px) {
     .testimonial_swiper {
