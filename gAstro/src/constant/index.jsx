@@ -107,38 +107,34 @@ export const problemsArray2 = [
 export const carouselImage = [
   {
     id: 1,
-    img: img1,
-  },
-  {
-    id: 2,
     img: img2,
   },
   {
-    id: 3,
+    id: 2,
     img: img3,
   },
   {
-    id: 4,
+    id: 3,
     img: img4,
   },
   {
-    id: 5,
+    id: 4,
     img: img5,
   },
   {
-    id: 6,
+    id: 5,
     img: img6,
   },
   {
-    id: 7,
+    id: 6,
     img: img7,
   },
   {
-    id: 8,
+    id: 7,
     img: img8,
   },
   {
-    id: 9,
+    id: 8,
     img: img9,
   },
 ];
