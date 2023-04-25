@@ -118,24 +118,6 @@ function CommonCarousel({ data, autoplay }) {
             backgroundAttachment: "fixed",
           }}
         />
-
-        {/* <Slide
-        shouldRenderMask
-        label="County Clare - Ireland"
-        background={{
-          backgroundImageSrc: countyClare,
-        }}
-      />
-
-      <Slide
-        shouldRenderMask
-        label="Crater Rock, OR - United States"
-        background={{
-          backgroundImageSrc: craterRock,
-        }}
-      /> */}
-
-        {/* <MenuNav /> */}
       </HeroSlider>
     </div>
   );

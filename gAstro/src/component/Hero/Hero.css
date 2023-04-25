@@ -99,3 +99,9 @@
 
 
 }
+@media screen and (max-width:578px) {
+    .hero-slider {
+        width: 98% !important;
+        margin: auto;
+    }
+}

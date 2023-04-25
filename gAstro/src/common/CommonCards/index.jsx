@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CommonCard.css";
 import Live from "../../assets/ytubelive.svg";
 import { Box, Button, Heading, Image } from "@chakra-ui/react";
 import { clamp } from "framer-motion";
 
 export default function CommonCard({ img }) {
+  // const [path, setpath] = React.useState(() => "");
+  // useEffect(() => {
+  //   setpath(() => img);
+  // }, [img]);
   return (
     <Box
       sx={{
         width: "clamp(260px, 21vw, 310px)",
         height: " clamp(347px, 25vh, 380px)",
 
-        position: " relative",
+        position: "relative",
         padding: { base: "7px", sm: "10px" },
         backgroundImage: `url("${img}")`,
         backgroundRepeat: "no-repeat",
@@ -24,9 +28,20 @@ export default function CommonCard({ img }) {
       }}
       className="commoncard-container"
     >
+      {/* <Image
+        width={"100%"}
+        height={"98%"}
+        // position={}
+        sx={{
+          position: "absolute",
+        }}
+        src={img}
+        alt
+      /> */}
       <Box
         sx={{
           display: "flex",
+          zIndex: "10",
           justifyContent: "space-between",
           "&  h2 ": {
             fontWeight: " 700",

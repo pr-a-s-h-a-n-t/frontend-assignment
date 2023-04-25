@@ -11,7 +11,7 @@ import secure from "../../assets/hero/secure.svg";
 import support from "../../assets/hero/support.svg";
 import verified from "../../assets/hero/verified.svg";
 
-import CommonCarousel from "../../common/commonCarousel";
+// import CommonCarousel from "../../common/commonCarousel";
 
 // import Swiper core and required modules
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper";

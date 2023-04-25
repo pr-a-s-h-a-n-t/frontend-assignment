@@ -39,7 +39,7 @@ export default function Review() {
               <img src={Star} alt="star icon" />
             </span>
             <span>
-              <Heading>Many Problem one Solution</Heading>
+              <Heading>User Review</Heading>
             </span>
             <span>
               <img src={Star} alt="star icon" />

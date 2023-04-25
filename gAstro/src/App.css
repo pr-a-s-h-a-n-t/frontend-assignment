@@ -1,6 +1,8 @@
 section {
     width: 95%;
-    padding: 0 40px;
+    padding: 60px;
+        margin: auto;
+        margin-top: 30px;
 }
 
 section+section {
@@ -13,6 +15,7 @@ section+section {
     section {
         width: 100%;
         padding: 0 10px;
+        margin: auto;
     }
 
     section+section {
