@@ -73,9 +73,11 @@ export default function Review() {
                         lg: "40%",
                       }}
                       margin={"auto"}
-                      className={""}
+                      
                     >
-                      <Text>{ele.text}</Text>
+                      <Text
+color={"#5B2800"}
+>{ele.text}</Text>
                     </Box>
                     <h3>{ele.name}</h3>
                   </SwiperSlide>
