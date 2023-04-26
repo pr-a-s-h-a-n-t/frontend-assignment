@@ -166,7 +166,7 @@ export default function UserTestimonial() {
               height: "20vh",
             }}
           />
-          <MenuNav />
+       
         </HeroSlider>
       </Box>
     </section>
